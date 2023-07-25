@@ -1,0 +1,101 @@
+PO 
+	id
+	partner_id
+	currency_id
+	company_id
+	name
+	state
+	date_order
+	picking_type_id
+
+PO-Line
+	id
+	order_id
+	name
+	product_id
+	product_qty
+	price_unit
+
+stock picking rel
+	purchase_order_id
+	stock_picking_id
+
+stock picking
+	id
+	location_id
+	location_dest_id
+	picking_type_id
+	move_type
+	
+stock picking type
+	id
+	sequence_code
+	code
+	reservation_method
+	create_backorder
+	name
+
+stock move
+	id
+	company_id
+	product_id
+	product_uom
+	location_id
+	location_dest_id
+	name
+	procure_method
+	product_uom_qty
+	date
+
+stock move line
+	id
+	company_id
+	product_uom_id
+	location_id
+	location_dest_id
+	reserved_uom_qty
+	date
+	
+product product
+	id
+	product_tmpl_id
+
+product template
+	id
+	default_code
+	categ_id
+	uom_id
+	uom_po_id
+	detailed_type
+	name
+	sale_line_warn
+	purchase_line_warn
+	tracking
+
+product category
+	id
+	name
+
+account move
+	id
+	journal_id
+	currency_id
+	state
+	move_type
+	auto_post
+	date
+	stock_move_id
+
+account move line
+	id
+	move_id
+	currency_id
+	display_type
+
+account move purchase order rel
+	purchase_order_id
+	accont_move_id
+	
+
+
+
